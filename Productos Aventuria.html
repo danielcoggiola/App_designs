@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Aventuria · Productos</title>
+  <link rel="stylesheet" href="colors_and_type.css">
+
+  <!-- Standalone-export resource manifest: JS-referenced images the bundler can't auto-discover. -->
+  <meta name="ext-resource-dependency" content="https://images.unsplash.com/photo-1552432552-06c0b0a94dda?w=800&q=80" data-resource-id="u_coliseo" />
+  <meta name="ext-resource-dependency" content="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=800&q=80" data-resource-id="u_maldivas800" />
+  <meta name="ext-resource-dependency" content="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&q=80" data-resource-id="u_plane" />
+  <meta name="ext-resource-dependency" content="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=1000&q=80" data-resource-id="u_paris1000" />
+  <meta name="ext-resource-dependency" content="https://images.unsplash.com/photo-1516426122078-c23e76319801?w=1000&q=80" data-resource-id="u_safari1000" />
+  <meta name="ext-resource-dependency" content="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=800&q=80" data-resource-id="u_paris800" />
+  <meta name="ext-resource-dependency" content="https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?w=800&q=80" data-resource-id="u_ny800" />
+  <meta name="ext-resource-dependency" content="https://images.unsplash.com/photo-1516426122078-c23e76319801?w=800&q=80" data-resource-id="u_safari800" />
+  <meta name="ext-resource-dependency" content="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=1000&q=80" data-resource-id="u_maldivas1000" />
+  <meta name="ext-resource-dependency" content="assets/isotipo-cropped.png" data-resource-id="a_iso" />
+  <meta name="ext-resource-dependency" content="assets/logo-aventuria-white-cropped.png" data-resource-id="a_logo_white" />
+  <meta name="ext-resource-dependency" content="assets/logo-aventuria-cropped.png" data-resource-id="a_logo" />
+
+  <script>
+    // RES(url): in the live project returns the URL unchanged; in the bundled
+    // standalone file returns the inlined blob URL the bundler stashed in
+    // window.__resources. The bundler strips the meta tags after building
+    // window.__resources, so the URL→id map is hardcoded here to survive that.
+    (function () {
+      var MAP = {
+        'https://images.unsplash.com/photo-1552432552-06c0b0a94dda?w=800&q=80': 'u_coliseo',
+        'https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=800&q=80': 'u_maldivas800',
+        'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&q=80': 'u_plane',
+        'https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=1000&q=80': 'u_paris1000',
+        'https://images.unsplash.com/photo-1516426122078-c23e76319801?w=1000&q=80': 'u_safari1000',
+        'https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=800&q=80': 'u_paris800',
+        'https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?w=800&q=80': 'u_ny800',
+        'https://images.unsplash.com/photo-1516426122078-c23e76319801?w=800&q=80': 'u_safari800',
+        'https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=1000&q=80': 'u_maldivas1000',
+        'assets/isotipo-cropped.png': 'a_iso',
+        'assets/logo-aventuria-white-cropped.png': 'a_logo_white',
+        'assets/logo-aventuria-cropped.png': 'a_logo'
+      };
+      window.RES = function (url) {
+        var id = MAP[url];
+        if (id && window.__resources && window.__resources[id]) return window.__resources[id];
+        return url;
+      };
+    })();
+  </script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <style>
+    body { margin: 0; background: #f0eee9; font-family: 'Montserrat', system-ui, sans-serif; }
+    /* Hide scrollbars inside artboard phone surfaces so review feels clean */
+    .av-phone *::-webkit-scrollbar { display: none; }
+    .av-phone * { scrollbar-width: none; }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+
+  <template id="__bundler_thumbnail" data-bg-color="#002557">
+    <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+      <rect width="1200" height="800" fill="#002557"/>
+      <g transform="translate(600 360)">
+        <circle r="150" fill="none" stroke="#3DFFDF" stroke-width="14" opacity="0.9"/>
+        <path d="M-60 40 L0 -80 L60 40 Z" fill="#3DFFDF"/>
+        <circle cy="-80" r="18" fill="#0179E2"/>
+      </g>
+      <text x="600" y="620" font-family="Montserrat, sans-serif" font-size="64" font-weight="800" fill="#ffffff" text-anchor="middle" letter-spacing="2">Aventuria</text>
+      <text x="600" y="680" font-family="Montserrat, sans-serif" font-size="28" font-weight="600" fill="#3DFFDF" text-anchor="middle" letter-spacing="6">PRODUCTOS</text>
+    </svg>
+  </template>
+
+  <script type="text/babel" src="src/components.jsx"></script>
+  <script type="text/babel" src="src/destinations.jsx"></script>
+  <script type="text/babel" src="src/Phone.jsx"></script>
+  <script type="text/babel" src="src/ProductosHub.jsx"></script>
+  <script type="text/babel" src="src/WalletLibre.jsx"></script>
+  <script type="text/babel" src="src/WalletTravel.jsx"></script>
+  <script type="text/babel" src="src/TNPL.jsx"></script>
+  <script type="text/babel" src="src/Auth.jsx"></script>
+  <script type="text/babel" src="src/Discover.jsx"></script>
+  <script type="text/babel" src="src/design-canvas.jsx"></script>
+  <script type="text/babel" src="src/DesktopShell.jsx"></script>
+  <script type="text/babel" src="src/DesktopAuth.jsx"></script>
+  <script type="text/babel" src="src/DesktopDiscoverHub.jsx"></script>
+  <script type="text/babel" src="src/DesktopWalletLibre.jsx"></script>
+  <script type="text/babel" src="src/DesktopWalletTravel.jsx"></script>
+  <script type="text/babel" src="src/DesktopTNPL.jsx"></script>
+  <script type="text/babel" src="src/WalletLibreNuevo.jsx"></script>
+  <script type="text/babel" src="src/Financiamiento.jsx"></script>
+
+  <script type="text/babel">
+    (function waitForGlobals() {
+      const need = ['DesignCanvas','DCSection','DCArtboard','PhoneShell','ProductosHub','WalletLibreScreen','WalletLibreContribute','WalletTravelScreen','WalletTravelCatalog','TNPLCatalog','TNPLTerms','LoadingScreen','LoginScreen','SignupScreen','DiscoverScreen','C','GRADIENT_IA','FONT','Ic',
+        'DesktopShell','DesktopLoading','DesktopLogin','DesktopLoginGallery','DesktopSignup','DesktopDiscover','DesktopHub',
+        'WalletLibreDesktopMain','WalletLibreDesktopContribute','WalletTravelDesktopMain','WalletTravelDesktopCatalog',
+        'TNPLDesktopCatalog','TNPLDesktopTerms',
+        'LibreCrearSueno','LibreConfirmacion','WalletsMenu',
+        'LibreCrearSuenoDesktop','LibreConfirmacionDesktop','WalletsMenuDesktop',
+        'FinanciamientoSolicitud','FinanciamientoSolicitudDesktop'];
+      if (!need.every(k => window[k])) return setTimeout(waitForGlobals, 50);
+
+      // Resolve lucide icons on demand: once after mount, then only when new
+      // artboard subtrees appear (observer is debounced) — no forever interval.
+      (function scheduleIcons() {
+        let queued = false;
+        const run = () => { queued = false; window.lucide && window.lucide.createIcons(); };
+        const ping = () => { if (queued) return; queued = true; requestAnimationFrame(() => setTimeout(run, 120)); };
+        ping();
+        new MutationObserver(muts => {
+          for (const m of muts) {
+            for (const n of m.addedNodes) {
+              if (n.nodeType === 1 && (n.matches?.('[data-lucide]') || n.querySelector?.('[data-lucide]'))) { ping(); return; }
+            }
+          }
+        }).observe(document.getElementById('root'), { childList: true, subtree: true });
+      })();
+
+      const PHONE_W = 360;
+      const PHONE_H = 760;
+
+      // Wrapper that sizes everything inside an artboard.
+      function PhoneAB({ label, dark, children }) {
+        return (
+          <div className="av-phone" style={{ width: PHONE_W, height: PHONE_H, position: 'relative' }}>
+            <PhoneShell dark={dark} label={label} height={PHONE_H}>
+              {children}
+            </PhoneShell>
+          </div>
+        );
+      }
+
+      const DESKTOP_W = 1440;
+      const DESKTOP_H = 900;
+      function DesktopAB({ label, children }) {
+        return (
+          <div className="av-phone" data-screen-label={label} style={{ width: DESKTOP_W, height: DESKTOP_H, position: 'relative', overflow: 'hidden' }}>
+            {children}
+          </div>
+        );
+      }
+
+      function App() {
+        return (
+          <DesignCanvas>
+            {/* === Onboarding · Auth + Loading =================================== */}
+            <DCSection id="auth" title="Onboarding · Auth & loading"
+              subtitle="Login, sign up y splash de carga · marca centrada en logo + isotipo · gradiente Aventuria.">
+              <DCArtboard id="loading-dark" label="Loading · isotipo" width={PHONE_W} height={PHONE_H}>
+                <PhoneAB label="Loading (dark)" dark={true}>
+                  <LoadingScreen dark={true}/>
+                </PhoneAB>
+              </DCArtboard>
+              <DCArtboard id="loading-light" label="Loading · light" width={PHONE_W} height={PHONE_H}>
+                <PhoneAB label="Loading (light)" dark={false}>
+                  <LoadingScreen dark={false}/>
+                </PhoneAB>
+              </DCArtboard>
+              <DCArtboard id="login-light" label="Login · light" width={PHONE_W} height={PHONE_H}>
+                <PhoneAB label="Login (light)" dark={false}>
+                  <LoginScreen dark={false}/>
+                </PhoneAB>
+              </DCArtboard>
+              <DCArtboard id="login-dark" label="Login · dark" width={PHONE_W} height={PHONE_H}>
+                <PhoneAB label="Login (dark)" dark={true}>
+                  <LoginScreen dark={true}/>
+                </PhoneAB>
+              </DCArtboard>
+              <DCArtboard id="signup-light" label="Sign up · light" width={PHONE_W} height={PHONE_H}>
+                <PhoneAB label="Sign up (light)" dark={false}>
+                  <SignupScreen dark={false}/>
+                </PhoneAB>
+              </DCArtboard>
+              <DCArtboard id="signup-dark" label="Sign up · dark" width={PHONE_W} height={PHONE_H}>
+                <PhoneAB label="Sign up (dark)" dark={true}>
+                  <SignupScreen dark={true}/>
+                </PhoneAB>
+              </DCArtboard>
+            </DCSection>
+
+            {/* === Discover · Elige tu próximo destino =========================== */}
+            <DCSection id="discover" title="Discover · Elige tu próximo destino"
+              subtitle="Búsqueda + tarjetas regionales (Europa, África) · entrada al catálogo curado.">
+              <DCArtboard id="discover-light" label="Discover · light" width={PHONE_W} height={PHONE_H}>
+                <PhoneAB label="Discover (light)" dark={false}>
+                  <DiscoverScreen dark={false}/>
+                </PhoneAB>
+              </DCArtboard>
+              <DCArtboard id="discover-dark" label="Discover · dark" width={PHONE_W} height={PHONE_H}>
+                <PhoneAB label="Discover (dark)" dark={true}>
+                  <DiscoverScreen dark={true}/>
+                </PhoneAB>
+              </DCArtboard>
+            </DCSection>
+
+            {/* === Hero intro section ============================================ */}
+            <DCSection id="intro" title="Productos Aventuria · Tres caminos al viaje"
+              subtitle="Wallet Libre · Wallet Travel · Travel Now Pay Later — sistema unificado en español, paleta Aventuria, Montserrat, foto-driven.">
+              <DCArtboard id="hub-light" label="Productos · Hub" width={PHONE_W} height={PHONE_H}>
+                <PhoneAB label="Productos hub (light)" dark={false}>
+                  <ProductosHub dark={false}/>
+                </PhoneAB>
+              </DCArtboard>
+              <DCArtboard id="hub-dark" label="Productos · Hub (dark)" width={PHONE_W} height={PHONE_H}>
+                <PhoneAB label="Productos hub (dark)" dark={true}>
+                  <ProductosHub dark={true}/>
+                </PhoneAB>
+              </DCArtboard>
+            </DCSection>
+
+            {/* === Wallet Libre =================================================== */}
+            <DCSection id="libre" title="1 · Wallet Libre"
+              subtitle="Ahorro flexible · sin destino fijo · 11% anual · libertad y baja fricción.">
+              <DCArtboard id="libre-light" label="Main · light" width={PHONE_W} height={PHONE_H}>
+                <PhoneAB label="Wallet Libre — main (light)" dark={false}>
+                  <WalletLibreScreen dark={false}/>
+                </PhoneAB>
+              </DCArtboard>
+              <DCArtboard id="libre-dark" label="Main · dark" width={PHONE_W} height={PHONE_H}>
+                <PhoneAB label="Wallet Libre — main (dark)" dark={true}>
+                  <WalletLibreScreen dark={true}/>
+                </PhoneAB>
+              </DCArtboard>
+              <DCArtboard id="libre-contribute" label="Aportar · light" width={PHONE_W} height={PHONE_H}>
+                <PhoneAB label="Wallet Libre — contribute" dark={false}>
+                  <WalletLibreContribute dark={false}/>
+                </PhoneAB>
+              </DCArtboard>
+            </DCSection>
+
+            {/* === Wallet Libre · Crear "Tu sueño" =============================== */}
+            <DCSection id="libre-nuevo" title="1b · Wallet Libre · Crear “Tu sueño”"
+              subtitle="Alta de wallet libre en dos pasos: título del viaje + foto + monto + fecha, y confirmación con el interés a generar.">
+              <DCArtboard id="libre-sueno-light" label="Tu sueño · light" width={PHONE_W} height={PHONE_H}>
+                <PhoneAB label="Wallet Libre — crear tu sueño (light)" dark={false}><LibreCrearSueno dark={false}/></PhoneAB>
+              </DCArtboard>
+              <DCArtboard id="libre-sueno-dark" label="Tu sueño · dark" width={PHONE_W} height={PHONE_H}>
+                <PhoneAB label="Wallet Libre — crear tu sueño (dark)" dark={true}><LibreCrearSueno dark={true}/></PhoneAB>
+              </DCArtboard>
+              <DCArtboard id="libre-confirm-light" label="Confirmación · light" width={PHONE_W} height={PHONE_H}>
+                <PhoneAB label="Wallet Libre — confirmación (light)" dark={false}><LibreConfirmacion dark={false}/></PhoneAB>
+              </DCArtboard>
+              <DCArtboard id="libre-confirm-dark" label="Confirmación · dark" width={PHONE_W} height={PHONE_H}>
+                <PhoneAB label="Wallet Libre — confirmación (dark)" dark={true}><LibreConfirmacion dark={true}/></PhoneAB>
+              </DCArtboard>
+            </DCSection>
+
+            {/* === Menú principal de wallets ===================================== */}
+            <DCSection id="wallets-menu" title="0 · Menú principal de wallets"
+              subtitle="Entrada única: 1) Wallets para viajes con Aventuria · 2) Wallets Libres · 3) Solicitar préstamo.">
+              <DCArtboard id="wallets-menu-light" label="Menú · light" width={PHONE_W} height={PHONE_H}>
+                <PhoneAB label="Menú de wallets (light)" dark={false}><WalletsMenu dark={false}/></PhoneAB>
+              </DCArtboard>
+              <DCArtboard id="wallets-menu-dark" label="Menú · dark" width={PHONE_W} height={PHONE_H}>
+                <PhoneAB label="Menú de wallets (dark)" dark={true}><WalletsMenu dark={true}/></PhoneAB>
+              </DCArtboard>
+              <DCArtboard id="wallets-menu-desktop-light" label="Menú · desktop light" width={DESKTOP_W} height={DESKTOP_H}>
+                <DesktopAB label="Menú de wallets (desktop, light)"><WalletsMenuDesktop dark={false}/></DesktopAB>
+              </DCArtboard>
+              <DCArtboard id="wallets-menu-desktop-dark" label="Menú · desktop dark" width={DESKTOP_W} height={DESKTOP_H}>
+                <DesktopAB label="Menú de wallets (desktop, dark)"><WalletsMenuDesktop dark={true}/></DesktopAB>
+              </DCArtboard>
+            </DCSection>
+
+            {/* === Solicitud de financiamiento ================================== */}
+            <DCSection id="financiamiento" title="4 · Solicitud de financiamiento · Peso a Peso"
+              subtitle="Simulador de monto/plazo con tasa 38% anual, datos personales, constancia fiscal y autorización de buró — tarjetas frosted glass sobre auroras Aventuria.">
+              <DCArtboard id="fin-mobile-light" label="Solicitud · light" width={PHONE_W} height={PHONE_H}>
+                <PhoneAB label="Financiamiento — solicitud (light)" dark={false}><FinanciamientoSolicitud dark={false}/></PhoneAB>
+              </DCArtboard>
+              <DCArtboard id="fin-mobile-dark" label="Solicitud · dark" width={PHONE_W} height={PHONE_H}>
+                <PhoneAB label="Financiamiento — solicitud (dark)" dark={true}><FinanciamientoSolicitud dark={true}/></PhoneAB>
+              </DCArtboard>
+              <DCArtboard id="fin-desktop-light" label="Solicitud · desktop light" width={DESKTOP_W} height={DESKTOP_H}>
+                <DesktopAB label="Financiamiento — solicitud (desktop, light)"><FinanciamientoSolicitudDesktop dark={false}/></DesktopAB>
+              </DCArtboard>
+              <DCArtboard id="fin-desktop-dark" label="Solicitud · desktop dark" width={DESKTOP_W} height={DESKTOP_H}>
+                <DesktopAB label="Financiamiento — solicitud (desktop, dark)"><FinanciamientoSolicitudDesktop dark={true}/></DesktopAB>
+              </DCArtboard>
+            </DCSection>
+
+            {/* === Wallet Travel ================================================== */}
+            <DCSection id="travel" title="2 · Wallet Aventuria"
+              subtitle="Ahorro atado a un destino y fecha · meta visible · seguro de viaje incluido · catálogo curado.">
+              <DCArtboard id="travel-light" label="Main · Maldivas (light)" width={PHONE_W} height={PHONE_H}>
+                <PhoneAB label="Wallet Travel — main (light)" dark={false}>
+                  <WalletTravelScreen dark={false}/>
+                </PhoneAB>
+              </DCArtboard>
+              <DCArtboard id="travel-light-no-yield" label="Main · sin rendimiento" width={PHONE_W} height={PHONE_H}>
+                <PhoneAB label="Wallet Travel — sin rendimiento (light)" dark={false}>
+                  <WalletTravelScreen dark={false} noYield={true}/>
+                </PhoneAB>
+              </DCArtboard>
+              <DCArtboard id="travel-dark" label="Main · Maldivas (dark)" width={PHONE_W} height={PHONE_H}>
+                <PhoneAB label="Wallet Travel — main (dark)" dark={true}>
+                  <WalletTravelScreen dark={true}/>
+                </PhoneAB>
+              </DCArtboard>
+              <DCArtboard id="travel-catalog-light" label="Catálogo · light" width={PHONE_W} height={PHONE_H}>
+                <PhoneAB label="Wallet Travel — catalog (light)" dark={false}>
+                  <WalletTravelCatalog dark={false}/>
+                </PhoneAB>
+              </DCArtboard>
+              <DCArtboard id="travel-catalog-dark" label="Catálogo · dark" width={PHONE_W} height={PHONE_H}>
+                <PhoneAB label="Wallet Travel — catalog (dark)" dark={true}>
+                  <WalletTravelCatalog dark={true}/>
+                </PhoneAB>
+              </DCArtboard>
+            </DCSection>
+
+            {/* === Travel Now, Pay Later ========================================== */}
+            <DCSection id="tnpl" title="3 · Travel Now · Pay Later"
+              subtitle="Crédito a tasa anual 38% · ahorro como colateral · pago directo al proveedor · catálogo aspiracional primero.">
+              <DCArtboard id="tnpl-catalog-light" label="Catálogo · light" width={PHONE_W} height={PHONE_H}>
+                <PhoneAB label="TNPL — catalog (light)" dark={false}>
+                  <TNPLCatalog dark={false}/>
+                </PhoneAB>
+              </DCArtboard>
+              <DCArtboard id="tnpl-catalog-dark" label="Catálogo · dark" width={PHONE_W} height={PHONE_H}>
+                <PhoneAB label="TNPL — catalog (dark)" dark={true}>
+                  <TNPLCatalog dark={true}/>
+                </PhoneAB>
+              </DCArtboard>
+              <DCArtboard id="tnpl-terms-light" label="Términos · light" width={PHONE_W} height={PHONE_H}>
+                <PhoneAB label="TNPL — terms (light)" dark={false}>
+                  <TNPLTerms dark={false}/>
+                </PhoneAB>
+              </DCArtboard>
+              <DCArtboard id="tnpl-terms-dark" label="Términos · dark" width={PHONE_W} height={PHONE_H}>
+                <PhoneAB label="TNPL — terms (dark)" dark={true}>
+                  <TNPLTerms dark={true}/>
+                </PhoneAB>
+              </DCArtboard>
+            </DCSection>
+
+            {/* === Desktop · Auth ================================================= */}
+            <DCSection id="desktop-auth" title="Desktop · Auth & loading"
+              subtitle="Splash de marca a pantalla completa · login/registro en split-screen con panel de marca.">
+              <DCArtboard id="desktop-loading" label="Loading" width={DESKTOP_W} height={DESKTOP_H}>
+                <DesktopAB label="Loading (desktop)"><DesktopLoading/></DesktopAB>
+              </DCArtboard>
+              <DCArtboard id="desktop-login-light" label="Login · light" width={DESKTOP_W} height={DESKTOP_H}>
+                <DesktopAB label="Login (desktop, light)"><DesktopLogin dark={false}/></DesktopAB>
+              </DCArtboard>
+              <DCArtboard id="desktop-login-dark" label="Login · dark" width={DESKTOP_W} height={DESKTOP_H}>
+                <DesktopAB label="Login (desktop, dark)"><DesktopLogin dark={true}/></DesktopAB>
+              </DCArtboard>
+              <DCArtboard id="desktop-login-gallery" label="Login · galería destinos" width={DESKTOP_W} height={DESKTOP_H}>
+                <DesktopAB label="Login (desktop, galería destinos)"><DesktopLoginGallery dark={false}/></DesktopAB>
+              </DCArtboard>
+              <DCArtboard id="desktop-signup-light" label="Sign up · light" width={DESKTOP_W} height={DESKTOP_H}>
+                <DesktopAB label="Sign up (desktop, light)"><DesktopSignup dark={false}/></DesktopAB>
+              </DCArtboard>
+              <DCArtboard id="desktop-signup-dark" label="Sign up · dark" width={DESKTOP_W} height={DESKTOP_H}>
+                <DesktopAB label="Sign up (desktop, dark)"><DesktopSignup dark={true}/></DesktopAB>
+              </DCArtboard>
+            </DCSection>
+
+            {/* === Desktop · Discover & Hub ======================================= */}
+            <DCSection id="desktop-discover-hub" title="Desktop · Discover & Productos Hub"
+              subtitle="Sidebar de navegación + contenido central · grids de 2 y 3 columnas.">
+              <DCArtboard id="desktop-discover-light" label="Discover · light" width={DESKTOP_W} height={DESKTOP_H}>
+                <DesktopAB label="Discover (desktop, light)"><DesktopDiscover dark={false}/></DesktopAB>
+              </DCArtboard>
+              <DCArtboard id="desktop-discover-dark" label="Discover · dark" width={DESKTOP_W} height={DESKTOP_H}>
+                <DesktopAB label="Discover (desktop, dark)"><DesktopDiscover dark={true}/></DesktopAB>
+              </DCArtboard>
+              <DCArtboard id="desktop-hub-light" label="Productos Hub · light" width={DESKTOP_W} height={DESKTOP_H}>
+                <DesktopAB label="Productos Hub (desktop, light)"><DesktopHub dark={false}/></DesktopAB>
+              </DCArtboard>
+              <DCArtboard id="desktop-hub-dark" label="Productos Hub · dark" width={DESKTOP_W} height={DESKTOP_H}>
+                <DesktopAB label="Productos Hub (desktop, dark)"><DesktopHub dark={true}/></DesktopAB>
+              </DCArtboard>
+            </DCSection>
+
+            {/* === Desktop · Wallet Libre ========================================= */}
+            <DCSection id="desktop-libre" title="Desktop · Wallet Libre"
+              subtitle="Dashboard de dos columnas: balance + gráfico de crecimiento a la izquierda, acciones + actividad a la derecha.">
+              <DCArtboard id="desktop-libre-main-light" label="Main · light" width={DESKTOP_W} height={DESKTOP_H}>
+                <DesktopAB label="Wallet Libre — main (desktop, light)"><WalletLibreDesktopMain dark={false}/></DesktopAB>
+              </DCArtboard>
+              <DCArtboard id="desktop-libre-main-dark" label="Main · dark" width={DESKTOP_W} height={DESKTOP_H}>
+                <DesktopAB label="Wallet Libre — main (desktop, dark)"><WalletLibreDesktopMain dark={true}/></DesktopAB>
+              </DCArtboard>
+              <DCArtboard id="desktop-libre-contribute" label="Aportar · panel" width={DESKTOP_W} height={DESKTOP_H}>
+                <DesktopAB label="Wallet Libre — contribute (desktop)"><WalletLibreDesktopContribute dark={false}/></DesktopAB>
+              </DCArtboard>
+            </DCSection>
+
+            {/* === Desktop · Wallet Libre · Crear “Tu sueño” ===================== */}
+            <DCSection id="desktop-libre-nuevo" title="Desktop · Wallet Libre · Crear “Tu sueño”"
+              subtitle="Formulario a la izquierda con vista previa viva de la wallet a la derecha; confirmación con resumen e interés estimado.">
+              <DCArtboard id="desktop-libre-sueno" label="Tu sueño · light" width={DESKTOP_W} height={DESKTOP_H}>
+                <DesktopAB label="Wallet Libre — crear tu sueño (desktop, light)"><LibreCrearSuenoDesktop dark={false}/></DesktopAB>
+              </DCArtboard>
+              <DCArtboard id="desktop-libre-confirm" label="Confirmación · light" width={DESKTOP_W} height={DESKTOP_H}>
+                <DesktopAB label="Wallet Libre — confirmación (desktop, light)"><LibreConfirmacionDesktop dark={false}/></DesktopAB>
+              </DCArtboard>
+              <DCArtboard id="desktop-libre-confirm-dark" label="Confirmación · dark" width={DESKTOP_W} height={DESKTOP_H}>
+                <DesktopAB label="Wallet Libre — confirmación (desktop, dark)"><LibreConfirmacionDesktop dark={true}/></DesktopAB>
+              </DCArtboard>
+            </DCSection>
+
+            {/* === Desktop · Wallet Travel ======================================== */}
+            <DCSection id="desktop-travel" title="Desktop · Wallet Aventuria"
+              subtitle="Foto de destino + progreso a la izquierda, hitos del viaje a la derecha · catálogo en grid de 2 columnas.">
+              <DCArtboard id="desktop-travel-main-light" label="Main · light" width={DESKTOP_W} height={DESKTOP_H}>
+                <DesktopAB label="Wallet Travel — main (desktop, light)"><WalletTravelDesktopMain dark={false}/></DesktopAB>
+              </DCArtboard>
+              <DCArtboard id="desktop-travel-main-dark" label="Main · dark" width={DESKTOP_W} height={DESKTOP_H}>
+                <DesktopAB label="Wallet Travel — main (desktop, dark)"><WalletTravelDesktopMain dark={true}/></DesktopAB>
+              </DCArtboard>
+              <DCArtboard id="desktop-travel-catalog-light" label="Catálogo · light" width={DESKTOP_W} height={DESKTOP_H}>
+                <DesktopAB label="Wallet Travel — catalog (desktop, light)"><WalletTravelDesktopCatalog dark={false}/></DesktopAB>
+              </DCArtboard>
+              <DCArtboard id="desktop-travel-catalog-dark" label="Catálogo · dark" width={DESKTOP_W} height={DESKTOP_H}>
+                <DesktopAB label="Wallet Travel — catalog (desktop, dark)"><WalletTravelDesktopCatalog dark={true}/></DesktopAB>
+              </DCArtboard>
+            </DCSection>
+
+            {/* === Desktop · TNPL ================================================= */}
+            <DCSection id="desktop-tnpl" title="Desktop · Travel Now · Pay Later"
+              subtitle="Catálogo aspiracional + línea de crédito a la izquierda; desglose de pagos y calendario a la derecha.">
+              <DCArtboard id="desktop-tnpl-catalog-light" label="Catálogo · light" width={DESKTOP_W} height={DESKTOP_H}>
+                <DesktopAB label="TNPL — catalog (desktop, light)"><TNPLDesktopCatalog dark={false}/></DesktopAB>
+              </DCArtboard>
+              <DCArtboard id="desktop-tnpl-catalog-dark" label="Catálogo · dark" width={DESKTOP_W} height={DESKTOP_H}>
+                <DesktopAB label="TNPL — catalog (desktop, dark)"><TNPLDesktopCatalog dark={true}/></DesktopAB>
+              </DCArtboard>
+              <DCArtboard id="desktop-tnpl-terms-light" label="Términos · light" width={DESKTOP_W} height={DESKTOP_H}>
+                <DesktopAB label="TNPL — terms (desktop, light)"><TNPLDesktopTerms dark={false}/></DesktopAB>
+              </DCArtboard>
+              <DCArtboard id="desktop-tnpl-terms-dark" label="Términos · dark" width={DESKTOP_W} height={DESKTOP_H}>
+                <DesktopAB label="TNPL — terms (desktop, dark)"><TNPLDesktopTerms dark={true}/></DesktopAB>
+              </DCArtboard>
+            </DCSection>
+
+          </DesignCanvas>
+        );
+      }
+      ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
+    })();
+  </script>
+</body>
+</html>
