@@ -34,7 +34,7 @@ function LoadingScreen({ dark = true }) {
             backdropFilter: 'blur(14px)', WebkitBackdropFilter: 'blur(14px)',
             border: '1px solid rgba(255,255,255,0.18)',
           }}/>
-          <img src={RES('assets/isotipo-cropped.png')} alt="iA"
+          <img src={RES('assets/isotipo-cropped.svg')} alt="iA"
             style={{ width: 108, height: 108, objectFit: 'contain', position: 'relative', zIndex: 1 }}/>
         </div>
 

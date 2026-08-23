@@ -1,0 +1,34 @@
+<svg viewBox="0 0 200 112" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="iA">
+  <defs>
+    <linearGradient id="isoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0031D4"/>
+      <stop offset="55%" stop-color="#0179E2"/>
+      <stop offset="100%" stop-color="#3DFFDF"/>
+    </linearGradient>
+  </defs>
+
+  <!-- "i" stem, split by a gap -->
+  <rect x="18" y="19" width="26" height="49" rx="13" fill="#0060D8"/>
+  <rect x="18" y="77" width="26" height="14" rx="7" fill="#0060D8"/>
+
+  <!-- "A" triangle with a wave cut at the base -->
+  <path d="M 129 19
+           L 184 91
+           C 176 86, 168 83, 158 84
+           C 146 85.5, 141 93, 128 93
+           C 113 93, 106 86, 96 80
+           C 88.5 75, 82.5 74.5, 76 78
+           Z"
+        fill="url(#isoGrad)"/>
+
+  <!-- White growth arrow / swoosh cut into the "A" -->
+  <path d="M 90 82
+           C 100 82, 111 78, 119 68
+           L 108 64
+           L 132 51
+           L 128 78
+           L 121 68
+           C 113 79, 101 84, 90 86
+           Z"
+        fill="#ffffff"/>
+</svg>

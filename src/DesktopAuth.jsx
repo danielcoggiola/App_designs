@@ -23,7 +23,7 @@ function DesktopLoading({ dark = true }) {
             position: 'absolute', inset: 0, borderRadius: 42, background: 'rgba(255,255,255,0.08)',
             backdropFilter: 'blur(14px)', border: '1px solid rgba(255,255,255,0.18)',
           }}/>
-          <img src={RES('assets/isotipo-cropped.png')} alt="iA" style={{ width: 124, height: 124, objectFit: 'contain', position: 'relative', zIndex: 1 }}/>
+          <img src={RES('assets/isotipo-cropped.svg')} alt="iA" style={{ width: 124, height: 124, objectFit: 'contain', position: 'relative', zIndex: 1 }}/>
         </div>
         <div style={{ textAlign: 'center' }}>
           <div style={{ fontSize: 13, fontWeight: 700, letterSpacing: '0.24em', color: C.waikiki, textTransform: 'uppercase' }}>Preparando tu próxima</div>
